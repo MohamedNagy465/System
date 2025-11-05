@@ -1,0 +1,306 @@
+body {   
+    font-family: "Cairo", sans-serif;
+    background: #1b1f24;
+    margin: 0;
+    padding: 20px;
+    direction: rtl;
+}
+
+.invoice-container {
+    background: #23272f;
+    color: #e8ecef;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border: 1px solid #2f3540;
+}
+/* === الهيدر === */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #4db6ac;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+    .header-logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #4db6ac;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    .header-logo h1 {
+      color: #80cbc4;
+      font-size: 32px;
+      margin: 0;
+    }
+    .header-logo div {
+      text-align: right;
+      color: #d1d5db;
+      font-size: 15px;
+    }
+
+    .header-logo img {
+      margin-top: 8px;
+      width: 200px;
+      border-radius: 10px;
+      padding: 5px;
+    }
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #80cbc4;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px rgba(128, 203, 196, 0.3);
+}
+
+.header p {
+    font-size: 14px;
+    color: #a0aab4;
+    margin-top: 6px;
+}
+
+/* === بيانات الفاتورة === */
+.details {
+    margin-bottom: 25px;
+}
+
+.details p {
+    margin: 4px 0;
+    font-size: 15px;
+    color: #d1d5db;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* === الجدول === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #2f3540;
+    text-align: center;
+}
+
+th {
+    background: #374151;
+    color: #f5f5f5;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:nth-child(even) {
+    background: #2a2f38;
+}
+
+tbody tr:hover {
+    background: #323843;
+    transition: 0.3s;
+}
+
+/* === المجموع المالي === */
+.totals {
+    text-align: right;
+    border-top: 2px solid #4db6ac;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.totals p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #4db6ac;
+}
+
+.totals p strong {
+    color: #fff;
+    margin-left: 5px;
+}
+
+/* === زر الطباعة === */
+.print-btn {
+    background: #00d084;
+    border: none;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: 0.3s;
+}
+
+.print-btn:hover {
+    background: #00b36b;
+    transform: scale(1.05);
+}
+/* === ملاحظات إضافية === */
+.additional-notes {
+  margin-top: 30px;
+  border-top: 2px solid #4db6ac;
+  padding-top: 8px;
+}
+
+.additional-notes label {
+  display: block;
+  font-size: 15px;
+  color: #80cbc4;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.note-item {
+  margin-bottom: 10px;
+}
+
+.note-line {
+  width: 100%;
+  border-bottom: 1px dashed #4db6ac;
+  padding: 6px 0;
+  color: #e8ecef;
+  font-size: 15px;
+  outline: none;
+}
+
+/* تغيير الشكل في حالة الكتابة */
+.note-line:focus {
+  background: rgba(77, 182, 172, 0.05);
+}
+/* === QR واتساب === */
+.qr-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.qr-section p {
+    color: #80cbc4;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.qr-section img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #4db6ac;
+    border-radius: 10px;
+    padding: 6px;
+    background: #2a2f38;
+}
+  /* QR للطباعة */
+    .qr-section p {
+        color: #4db6ac !important;
+        font-weight: bold;
+    }
+
+    .qr-section img {
+        border: 1px solid #4db6ac    !important;
+        background: none !important;
+        filter: grayscale(100%) !important;
+    }
+
+
+/* === للطباعة === */
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .invoice-container {
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+        margin: 0;
+        border-radius: 0;
+    }
+          .header-logo img {
+        filter: grayscale(100%);
+        background: none;
+        border: none;
+      }
+
+    .header {
+        border-bottom: 2px solid #000 !important;
+    }
+
+    .header h1 {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+    .header-logo h1{
+        color: #000;
+    }
+    .header-logo p {
+        color: #000;
+    }
+    .header p,
+    .details p,
+    td,
+    th,
+    .footer {
+        color: #000 !important;
+    }
+
+    th {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        border: 1px solid #000 !important;
+    }
+
+    tbody tr:nth-child(even) {
+        background: #eee !important;
+    }
+
+    td {
+        border: 1px solid #000 !important;
+    }
+
+    .totals {
+        border-top: 2px solid #000 !important;
+    }
+
+    .totals p,
+    .totals p strong {
+        color: #000 !important;
+    }
+
+    .print-btn {
+        display: none !important;
+    }
+
+    img {
+        filter: grayscale(100%) !important;
+    }
+  .note-line {
+    border-bottom: 1px solid #000 !important;
+    color: #000 !important;
+    background: none !important;
+  }
+
+  .note-line::before {
+    content: "";
+  }
+
+  .note-line[contenteditable="true"] {
+    outline: none !important;
+  }
+  .additional-notes label{
+    color: #000;
+  }
+}
+  

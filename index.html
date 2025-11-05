@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فاتورة - عباد الرحمن</title>
+  <link rel="icon" type="image/png" href="./imega/elnagar_global_trading_transparent_logo-removebg-preview.png">
+  <link rel="stylesheet" href="./css/layout.css">
+ 
+</head>
+<body>
+  <div class="invoice-container">
+    <!-- === الهيدر === -->
+    <div class="header-logo">
+      <div class="logo">
+        <img src="./imega/elnagar_global_trading_transparent_logo-removebg-preview.png" alt="شعار الشركة">
+      </div>
+      <div class="title">
+        <h1>عباد الرحمن</h1>
+        <p>تجارة وتوزيع المنظفات والورقيات</p>
+      </div>
+    </div>
+    <!-- === بيانات الفاتورة === -->
+    <div class="details">
+      <p><span>رقم الفاتورة:</span> #2025</p>
+      <p><span>التاريخ:</span> 5 نوفمبر 2025</p>
+      <p><span>اسم العميل:</span> محمد أحمد</p>
+      <p><span>العنوان:</span> الجيزة - الهرم</p>
+      <p><span>اسم المندوب:</span> أحمد النجّار</p>
+      <p><span>رقم الهاتف:</span> 01227576328</p>
+    </div>
+    <!-- === الجدول === -->
+    <table>
+      <thead>
+        <tr>
+          <th>الصنف</th>
+          <th>الكمية</th>
+          <th>الوحدة</th>
+          <th>سعر الوحدة</th>
+          <th>الإجمالي</th>
+          <th>ملاحظات</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>مناديل ورقية</td>
+          <td>5</td>
+          <td>كرتونة</td>
+          <td>25 ج.م</td>
+          <td>125 ج.م</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>أكياس بلاستيك</td>
+          <td>10</td>
+          <td>ربطة</td>
+          <td>10 ج.م</td>
+          <td>100 ج.م</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>منظف سائل</td>
+          <td>2</td>
+          <td>زجاجة</td>
+          <td>40 ج.م</td>
+          <td>80 ج.م</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- === المجموع المالي === -->
+    <div class="totals">
+      <p><strong>الإجمالي الكلي:</strong> 625 ج.م</p>
+      <p><strong>المدفوع:</strong> 400 ج.م</p>
+      <p><strong>المتبقي:</strong> 225 ج.م</p>
+    </div>
+    <!-- === ملاحظات إضافية === -->
+    <div class="additional-notes">
+      <div class="note-item">
+        <label>ملاحظات إضافية:</label>
+        <div class="note-line" contenteditable="true">اكتب ملاحظاتك هنا...</div>
+      </div>
+
+      <div class="note-item">
+        <label>المستلم:</label>
+        <div class="note-line" contenteditable="true">اسم المستلم أو التوقيع</div>
+      </div>
+    </div>
+    <!-- === زر الطباعة === -->
+    <button class="print-btn" onclick="window.print()">🖨️ طباعة الفاتورة</button>
+    <!-- === الفوتر === -->
+    <!-- <div class="footer">
+      <p>شكرًا لتعاملكم معنا ❤️</p>
+      <p>عباد الرحمن © 2025</p>
+    </div> -->
+  </div>
+</body>
+</html>
