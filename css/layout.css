@@ -99,6 +99,13 @@ th, td {
     text-align: center;
 }
 
+th.col-serial { width: 2%; }
+th.col-item { width: 45%; }
+th.col-qty { width: 5%; }
+th.col-unit { width: 10%; }
+th.col-price { width: 13%; }
+th.col-total { width: 10%; }
+th.col-notes { width: 15%; }
 th {
     background: #374151;
     color: #f5f5f5;
