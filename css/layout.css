@@ -358,18 +358,18 @@ tbody tr:hover {
     padding: 10px;
   }
   .invoice-container {
-    padding: 20px;
+    padding: 10px;
     margin: 15px auto;
   }
   .header-logo img {
-    width: 130px;
+    width: 110px;
     margin-bottom: 10px;
   }
   .header-logo h1 {
     font-size: 20px;
   }
   .header-logo p{
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
   }
   table th, table td {
