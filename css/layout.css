@@ -362,14 +362,15 @@ tbody tr:hover {
     margin: 15px auto;
   }
   .header-logo img {
-    width: 150px;
+    width: 130px;
     margin-bottom: 10px;
   }
   .header-logo h1 {
     font-size: 20px;
   }
   .header-logo p{
-    font-size: 6px;
+    font-size: 8px;
+    font-weight: bold;
   }
   table th, table td {
     font-size: 11px;
@@ -381,10 +382,6 @@ tbody tr:hover {
   .print-btn {
     width: 100%;
     font-size: 16px;
-  }
-  .qr-section img {
-    width: 100px;
-    height: 100px;
   }
  th.col-notes,
  td.col-notes{
