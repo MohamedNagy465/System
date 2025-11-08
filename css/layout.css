@@ -191,24 +191,6 @@ tbody tr:hover {
 .note-line:focus {
   background: rgba(77, 182, 172, 0.05);
 }
-/* === QR واتساب === */
-.qr-section {
-    text-align: center;
-    margin-top: 25px;
-}
-.qr-section p {
-    color: #80cbc4;
-    font-size: 15px;
-    margin-bottom: 8px;
-}
-.qr-section img {
-    width: 120px;
-    height: 120px;
-    border: 2px solid #4db6ac;
-    border-radius: 10px;
-    padding: 6px;
-    background: #2a2f38;
-}
   /* QR للطباعة */
     .qr-section p {
         color: #4db6ac !important;
@@ -384,17 +366,17 @@ tbody tr:hover {
     margin-bottom: 10px;
   }
   .header-logo h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .header-logo p{
-    font-size: 12px;
+    font-size: 6px;
   }
   table th, table td {
-    font-size: 13px;
-    padding: 8px;
+    font-size: 11px;
+    padding: 6px;
   }
   .totals p {
-    font-size: 14px;
+     font-size: 14px;
   }
   .print-btn {
     width: 100%;
@@ -404,4 +386,9 @@ tbody tr:hover {
     width: 100px;
     height: 100px;
   }
+ th.col-notes,
+ td.col-notes{
+  display: none;
+  }
+
 }

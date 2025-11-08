@@ -44,8 +44,7 @@
     }
     th.col-item { width: 45%; }
     th.col-qty { width: 5%; }
-th.col-total { width: 10%; }
-
+    th.col-total { width: 10%; }
     th, td {
         padding: 3px 0;
         text-align: center;
