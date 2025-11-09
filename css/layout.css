@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #4db6ac;
-    padding-bottom: 10px;
+    
     margin-bottom: 25px;
 }
     .header-logo {
@@ -34,8 +34,9 @@ body {
       margin-bottom: 25px;
     }
     .header-logo h1 {
-      color: #80cbc4;
+      color: #fff;
       font-size: 32px;
+      font-weight: bold;
       margin: 0;
     }
     .header-logo .text{
@@ -50,8 +51,8 @@ body {
     }
     .header-logo div {
       text-align: right;
-      color: #d1d5db;
-      font-size: 15px;
+      color: #fff;
+      font-size: 20px;
     }
 
     .header-logo img {
@@ -74,7 +75,8 @@ body {
 
 .details p {
     margin: 4px 0;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
     color: #d1d5db;
     display: flex;
     justify-content: space-between;
@@ -94,7 +96,6 @@ th, td {
     border-bottom: 1px solid #2f3540;
     text-align: center;
 }
-
 th.col-serial { width: 2%; }
 th.col-item { width: 45%; }
 th.col-qty { width: 5%; }
@@ -129,7 +130,8 @@ tbody tr:hover {
 .totals p {
     font-size: 16px;
     margin: 5px 0;
-    color: #4db6ac;
+    color: #fff;
+    font-weight: 700;
 }
 .totals p strong {
     color: #fff;
@@ -165,7 +167,7 @@ tbody tr:hover {
 .additional-notes label {
   display: block;
   font-size: 15px;
-  color: #80cbc4;
+  color: #fff;
   margin-bottom: 6px;
   font-weight: bold;
 }
@@ -187,19 +189,6 @@ tbody tr:hover {
 .note-line:focus {
   background: rgba(77, 182, 172, 0.05);
 }
-  /* QR للطباعة */
-    .qr-section p {
-        color: #4db6ac !important;
-        font-weight: bold;
-    }
-
-    .qr-section img {
-        border: 1px solid #4db6ac    !important;
-        background: none !important;
-        filter: grayscale(100%) !important;
-    }
-
-
 /* === للطباعة === */
 @media print {
   body {
