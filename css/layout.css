@@ -5,7 +5,6 @@ body {
     padding: 20px;
     direction: rtl;
 }
-
 .invoice-container {
     background: #23272f;
     color: #e8ecef;
@@ -17,14 +16,6 @@ body {
     border: 1px solid #2f3540;
 }
 /* === الهيدر === */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #4db6ac;
-    
-    margin-bottom: 25px;
-}
     .header-logo {
       display: flex;
       justify-content: space-between;
@@ -55,7 +46,7 @@ body {
       font-size: 20px;
     }
 
-    .header-logo img {
+   .header-logo img {
       margin-top: 8px;
       width: 200px;
       border-radius: 10px;
@@ -70,18 +61,24 @@ body {
 
 /* === بيانات الفاتورة === */
 .details {
-    margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* صفين */
+  gap: 6px 20px; /* مسافة بين الصفوف والأعمدة */
+  margin-bottom: 10px;
+  direction: rtl;
 }
-
 .details p {
-    margin: 4px 0;
-    font-size: 20px;
-    font-weight: bold;
-    color: #d1d5db;
-    display: flex;
-    justify-content: space-between;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  color: #f1f5f9;
 }
 
+.details strong {
+  color: #fff;
+}
 /* === الجدول === */
 table {
     width: 100%;
@@ -90,11 +87,12 @@ table {
     margin-bottom: 25px;
     border-radius: 8px;
 }
-
 th, td {
     padding: 12px;
     border-bottom: 1px solid #2f3540;
-    text-align: center;
+    /* text-align: center; */
+    font-weight: bold;
+    font-size: 16px;
 }
 th.col-serial { width: 2%; }
 th.col-item { width: 45%; }
@@ -111,11 +109,9 @@ th {
     letter-spacing: 0.5px;
     text-align: center;
 }
-
 tbody tr:nth-child(even) {
     background: #2a2f38;
 }
-
 tbody tr:hover {
     background: #323843;
     transition: 0.3s;
@@ -128,7 +124,8 @@ tbody tr:hover {
     padding-top: 10px;
 }
 .totals p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     margin: 5px 0;
     color: #fff;
     font-weight: 700;
@@ -152,7 +149,6 @@ tbody tr:hover {
     margin: 20px auto;
     transition: 0.3s;
 }
-
 .print-btn:hover {
     background: #00b36b;
     transform: scale(1.05);
@@ -163,7 +159,6 @@ tbody tr:hover {
   border-top: 2px solid #4db6ac;
   padding-top: 8px;
 }
-
 .additional-notes label {
   display: block;
   font-size: 15px;
@@ -171,11 +166,9 @@ tbody tr:hover {
   margin-bottom: 6px;
   font-weight: bold;
 }
-
 .note-item {
   margin-bottom: 10px;
 }
-
 .note-line {
   width: 100%;
   border-bottom: 1px dashed #4db6ac;
@@ -184,12 +177,15 @@ tbody tr:hover {
   font-size: 15px;
   outline: none;
 }
-
 /* تغيير الشكل في حالة الكتابة */
 .note-line:focus {
   background: rgba(77, 182, 172, 0.05);
 }
-/* === للطباعة === */
+h3{
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
 @media print {
   body {
     background: #fff !important;
@@ -208,74 +204,83 @@ tbody tr:hover {
     border-radius: 0;
     padding: 10px !important;
   }
-
-  .header-logo {
+   .header-logo {
     padding-bottom: 2px !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 5px !important;
+    border-bottom: 1px solid #000 !important;
   }
-
   .header-logo img {
-    width: 150px !important;
+    width: 130px !important;
     margin: 0 !important;
   }
-
   .header-logo .title {
     text-align: center;
   }
-
   .header-logo h1 {
     font-size: 20px !important;
     color: #000;
     margin: 0 !important;
+    font-weight: bold;
   }
 
   .header-logo p {
     color: #000 !important;
+    font-weight: bold;
   }
+  .details {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* صفين */
+  gap: 6px 20px !important; 
+  margin-bottom: 5px !important;
+  direction: rtl !important;
+}
 
   .details p {
     margin: 1px 0 !important;
     font-size: 12px !important;
     color: #000 !important;
+    font-weight: bold;
   }
-
+  .details strong {
+  color: #000 !important;
+}
   table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 6px !important;
   }
-
   th, td {
     padding: 4px 2px !important;
     border: 1px solid #000 !important;
-    font-size: 11px !important;
+    font-size: 14px !important;
+    font-weight: bold;
   }
-
   th {
     background: #f5f5f5 !important;
     color: #000 !important;
   }
-
   tbody tr:nth-child(even) {
     background: #eee !important;
   }
-
-  .totals {
+    .totals {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    direction: rtl !important;
+    gap: 4px 10px !important;
     border-top: 1px solid #000 !important;
-    margin-top: 3px !important;
-    padding-top: 2px !important;
   }
-
   .totals p {
-    font-size: 11px !important;
-    margin: 1px 0 !important;
+    width: 48% !important;
+    margin: 2px 0 !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
     color: #000 !important;
   }
-
   .totals p strong {
     color: #000 !important;
+    font-weight: bold;
   }
-
   .note-line {
     border-bottom: 1px solid #000 !important;
     color: #000 !important;
@@ -283,61 +288,52 @@ tbody tr:hover {
     padding: 2px 0 !important;
     font-size: 11px !important;
   }
-
   .additional-notes {
     margin-top: 6px !important;
     padding-top: 3px !important;
   }
-
   .additional-notes label {
     color: #000;
     font-size: 11px !important;
     margin-bottom: 2px !important;
   }
-
   .print-btn {
     display: none !important;
   }
-
   img {
     filter: grayscale(100%) !important;
   }
+  h3{
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
 }
-
 /* إعدادات الورق A4 */
 @page {
   size: A4 portrait;
   margin: 10mm;
 }
-
 /* إعدادات الورق A5 */
 @media print and (size: A5) {
-  @page {
+  @page{
     size: A5 portrait;
     margin: 8mm;
   }
-
-  body {
-    font-size: 11px !important;
-  }
-
   .invoice-container {
     padding: 8mm !important;
   }
-
-  th, td {
-    font-size: 10px !important;
+   th, td {    
+    font-size: 8px !important;
+    font-weight: bold;
   }
-
-  .header-logo img {
-    width: 120px !important;
-  }
-
-  .header-logo h1 {
-    font-size: 16px !important;
-  }
+  .details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important; 
+  gap: 6px 20px; 
+  margin-bottom: 10px;
+  direction: rtl;
 }
-
+}
 @media (max-width: 600px) {
   body {
     padding: 10px;
@@ -356,6 +352,10 @@ tbody tr:hover {
   .header-logo p{
     font-size: 10px;
     font-weight: bold;
+  }
+   .details {
+    grid-template-columns: 1fr; 
+    gap: 4px 0;
   }
   table th, table td {
     font-size: 11px;
